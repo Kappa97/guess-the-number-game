@@ -19,11 +19,15 @@ public class GameImpl implements Game{
     private boolean validNumberRange = true;
 
     // == constructors ==
-    public GameImpl(NumberGenerator numberGenerator){
+//    public GameImpl(NumberGenerator numberGenerator){
+//        this.numberGenerator = numberGenerator;
+//    }
+
+    // == public methods ==
+    public void setNumberGenerator(NumberGenerator numberGenerator){
         this.numberGenerator = numberGenerator;
     }
 
-    // == public methods ==
     @Override
     public void reset() {
         smallest = 0;

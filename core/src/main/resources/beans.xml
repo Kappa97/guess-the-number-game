@@ -7,6 +7,6 @@
     <bean id="numberGenerator" class="academy.learnprogramming.NumberGeneratorImpl"/>
 
     <bean id="game" class="academy.learnprogramming.GameImpl">
-        <constructor-arg ref="numberGenerator"/>
+        <property name="numberGenerator" ref="numberGenerator"/>
     </bean>
 </beans>
