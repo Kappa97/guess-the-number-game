@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-@Component("numberGenerator_id")
 public class NumberGeneratorImpl implements NumberGenerator{
 
     // == fields ==

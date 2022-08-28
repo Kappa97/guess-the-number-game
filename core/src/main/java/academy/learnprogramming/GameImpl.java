@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
 public class GameImpl implements Game{
 
     // == constants ==
@@ -69,6 +68,10 @@ public class GameImpl implements Game{
 
     @Override
     public int setRemainingGuesses() {
+        return remainingGuesses;
+    }
+    @Override
+    public int getRemainingGuesses() {
         return remainingGuesses;
     }
 

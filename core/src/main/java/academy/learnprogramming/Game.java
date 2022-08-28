@@ -12,6 +12,7 @@ public interface Game {
 
     int getBiggest();
 
+    int getRemainingGuesses();
     int setRemainingGuesses();
 
     void reset();
