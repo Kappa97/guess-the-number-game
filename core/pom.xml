@@ -31,5 +31,11 @@
             <artifactId>spring-context</artifactId>
         </dependency>
 
+        <!-- Annotation Api -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
