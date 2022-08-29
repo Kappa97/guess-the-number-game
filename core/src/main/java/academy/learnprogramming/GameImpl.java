@@ -17,12 +17,13 @@ public class GameImpl implements Game{
     @Autowired
     private NumberGenerator numberGenerator;
     private int guessCount = 10;
-    private int number;
+    private int number=6;
     private int guess;
     private int smallest;
-    private int biggest;
+    private int biggest=100;
     private int remainingGuesses;
     private boolean validNumberRange = true;
+
 
     // == init ==
     @Override
@@ -35,9 +36,9 @@ public class GameImpl implements Game{
         log.debug("the number is {}, reset()", number);
     }
 
-
     public void preDestroy() {
         log.info("in Game preDestroy()");
+        reset();
      }
 
     // == public methods ==
