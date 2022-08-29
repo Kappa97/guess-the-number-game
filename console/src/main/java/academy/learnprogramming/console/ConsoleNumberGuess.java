@@ -31,7 +31,7 @@ public class ConsoleNumberGuess {
     @EventListener(ContextRefreshedEvent.class)
     public void start() {
         log.info("start() --> Container ready for use.");
-
+        game.reset();
         Scanner scanner = new Scanner(System.in);
 
         while (true){
