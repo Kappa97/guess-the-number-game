@@ -2,18 +2,26 @@ package academy.learnprogramming.config;
 
 import academy.learnprogramming.GuessCount;
 import academy.learnprogramming.MaxNumber;
+import academy.learnprogramming.MinNumber;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
     // == fields ==
+    @Value("${game.maxNumber}")
+    private int maxNumber;
 
-    private int maxNumber = 25;
+    @Value("${game.guessCount}")
+    private int guessCount;
 
-    private int guessCount = 8;
+    @Value("${game.minNumber}")
+    private int minNumber;
 
     // == bean methods ==
     @Bean
@@ -26,6 +34,12 @@ public class GameConfig {
     @GuessCount
     public int getGuessCount(){
         return guessCount;
+    }
+
+    @Bean
+    @MinNumber
+    public int getMinNumber(){
+        return minNumber;
     }
 
 }
